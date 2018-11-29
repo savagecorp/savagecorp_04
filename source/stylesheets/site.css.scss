@@ -1,0 +1,308 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,700');
+@font-face {
+    font-family: 'neo-noir';
+    src: url('../fonts/SNNeoNoire-Regular-webfont.eot');
+    src: url('../fonts/SNNeoNoire-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/SNNeoNoire-Regular-webfont.woff2') format('woff2'),
+         url('../fonts/SNNeoNoire-Regular-webfont.woff') format('woff'),
+         url('../fonts/SNNeoNoire-Regular-webfont.ttf') format('truetype'),
+         url('../fonts/SNNeoNoire-Regular-webfont.svg#sn_neonoireregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@mixin linear-gradient($color01, $color02) {
+  background: $color01;
+  background: -moz-linear-gradient(top, $color01 0%, $color02 100%, $color02 100%);
+  background: -webkit-linear-gradient(top, $color01 0%,$color02 100%,$color02 100%);
+  background: linear-gradient(to bottom, $color01 0%,$color02 100%,$color02 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$color01', endColorstr='$color02',GradientType=0 );
+}
+
+// Colors
+$dark: #0F0F0F;
+$grey: #DFE0E4;
+$white: #ffffff;
+
+* {
+   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+body {
+  background: url('../images/header-background-2400.png') center top no-repeat;
+  color: #333;
+  font-family: -apple-system, BlinkMacSystemFont, "Avenir Next", "Avenir",
+    "Segoe UI", "Lucida Grande", "Helvetica Neue", "Helvetica", "Fira Sans",
+    "Roboto", "Noto", "Droid Sans", "Cantarell", "Oxygen", "Ubuntu",
+    "Franklin Gothic Medium", "Century Gothic", "Liberation Sans", sans-serif;
+  padding: 3vh 0 0 0;
+  margin: 0;
+  text-align: center;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  opacity: 1;
+  -webkit-transition: 0.2s ease-in-out all;
+  -moz-transition: 0.2s ease-in-out all;
+  -o-transition: 0.2s ease-in-out all;
+  transition: 0.2s ease-in-out all;
+}
+.logo {
+  color:$white;
+  font-family: "neo-noir", "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.header {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.social_links{
+  color: $white;
+  position: relative;
+  a {
+    font-size: 18px;
+    color: $white;
+    padding: 3px;
+    -webkit-transition: 0.1s ease-in-out all;
+    -moz-transition: 0.1s ease-in-out all;
+    -o-transition: 0.1s ease-in-out all;
+    transition: 0.1s ease-in-out all;
+    &:hover {
+      color:#01d6ed;
+      position: relative;
+      .fab {
+        
+        -webkit-box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.2);
+        -moz-box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.2);
+        box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.2);
+      }
+    }
+  }
+}
+
+.content, .content.-nopadding {
+  position: relative;
+  padding: 4vh 2vh;
+  img {
+    margin: 0 auto;
+  }
+}
+
+.content a {
+  display: inline-block;
+  margin:0;
+  vertical-align:top;
+  &:hover {
+    h3 {opacity: 1 !important;}
+    img {opacity: 0.2;}
+    cursor: default;
+  }
+}
+
+.container-travel { }
+
+.container-include {
+  @include linear-gradient(#8aceff, #52a0fe);
+}
+
+.container-inverse {
+  @include linear-gradient(#19C284, #04905C);  
+}
+
+.container-tvparty {
+  background-color: #FF9152;
+}
+
+.container-lwtsummit {
+  @include linear-gradient(#59E4FB, #2DC4F5);
+}
+
+.container-cheddarios {
+  background-color: #161F30;
+}
+
+.container-thewing {
+  background-color: #E69F81;
+}
+
+.container-conversocial {
+  @include linear-gradient(#FF5E78, #FF3043);
+}
+
+.container-cheddartvos {
+  background-color: #F9419E;
+}
+
+.container-soma { 
+  @include linear-gradient(#4552B2, #0D1658);
+}
+
+.container-pleadthefifth {
+  background-color: #01d6ed;
+}
+
+.container.clientlist {
+  background: #01d6ed;
+  color: $white;
+  -ms-box-orient: horizontal;
+  display: -ms-flexbox;
+  display: -moz-flex;
+  display: flex;
+  -ms-flex-flow: column wrap;
+  flex-flow: column wrap;
+  .content {
+    padding-top: 0;
+    margin: 0 auto;
+    a {
+      cursor: pointer;
+    }
+  }
+}
+
+a.contact {
+  color: $white;
+  padding: 1rem;
+  margin-top: 1rem;
+  border: 2px solid $white;
+  text-decoration: none;
+  font-weight: 700;
+  &:hover {
+    background: $white;
+    color: #01d6ed;
+  }
+}
+
+
+
+@media screen and (min-width: 100px) {
+
+  h1 {
+    // font-size: 6.375rem;
+    font-size: 2.375rem;
+    font-weight: 300;
+    margin-bottom: 1rem;
+    -webkit-transition: 0.15s ease-in-out all;
+    -moz-transition: 0.15s ease-in-out all;
+    -o-transition: 0.15s ease-in-out all;
+    transition: 0.15s ease-in-out all;
+  }
+
+  h2 {
+    font-size: 1rem;
+    color: $white;
+    font-weight: 300;
+    text-transform: uppercase;
+    line-height: 1.75rem;
+    letter-spacing: 2px;
+  }
+
+  h3, h4 {
+    font-size: 0.875rem;
+    position: absolute;
+    top: 25%;
+    left: 0;
+    width: 60%;
+    padding: 0 20%;
+    text-align: center;
+    opacity: 0;
+    color: #FFF;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    line-height: 1.675rem;
+    font-weight: 300;
+    z-index: 100;
+    text-shadow: 0px 2px 8px rgba(0, 0, 0, 0.2);
+    -webkit-transition: 0.33s ease-in-out all;
+    -moz-transition: 0.33s ease-in-out all;
+    -o-transition: 0.33s ease-in-out all;
+    transition: 0.33s ease-in-out all;
+    span {
+      font-weight: 600;
+    }
+  }
+
+  h4 {
+    position: relative; 
+    opacity: 1; 
+    font-weight: 600; 
+    color: $white;
+    text-shadow: none;
+    width: 70%;
+    padding: 0 15%;
+  }
+
+  .header {
+    padding: 0 10%;
+  }
+
+  .content.-nopadding {
+    padding-top: 0;
+    padding-bottom: 0;
+    margin: 0;
+  }
+
+  .mobileimg { display: block;}
+  .desktopimg {display: none;}
+
+  .content .clientlogowrap {
+    display: none;
+    padding: 8vh 0;
+    max-width: 994px;
+    margin: 0 auto;
+    a:hover img {
+        opacity: 0.8;
+      }
+  }
+}
+
+@media screen and (min-width: 660px) {
+  .content .clientlogowrap {
+    display: block;
+  }
+  h1 { 
+    font-size: 3.675rem;
+    margin-bottom: 2rem;
+  }
+}
+
+@media screen and (min-width: 860px) {
+  h1 { 
+    font-size: 5.375rem;
+    margin-bottom: 2rem;
+  }
+  h2 { font-size: 24px; line-height: 2.375rem;}
+  h3 { font-size: 16px; top: 45%;}
+
+  .header h3 {
+    width: 80%;
+    padding: 0 10%;
+  }
+
+  .content, .content.-nopadding {
+    padding: 14vh 0;
+  }
+
+  .content.-nopadding {
+    padding-top: 0;
+    padding-bottom: 0;
+    margin: 0;
+  }
+
+  .mobileimg { display: none;}
+  .desktopimg {display: block;}
+
+}
+
+
+@media screen and (min-width: 1000px) {
+  h1 { 
+    font-size: 6.375rem;
+    margin-bottom: 2rem;
+  }
+}
